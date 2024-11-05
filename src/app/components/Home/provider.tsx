@@ -30,6 +30,7 @@ interface IContext {
   initPet: (isInit?: boolean) => void;
   initProfile: () => void;
   handleHealingPet?: (pet: any, defaultAssets: any, isAll?: boolean) => void;
+  handleHavest?: (data: any) => void
 }
 
 const initialState: IContext = {
@@ -346,6 +347,7 @@ const HomeProvider: FunctionComponent<IProviderProps> = ({ children }) => {
     initPet,
     initProfile,
     handleHealingPet,
+    handleHavest
   };
 
   useEffect(() => {
